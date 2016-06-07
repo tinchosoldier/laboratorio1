@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>DtEmpresa.h</itemPath>
+      <itemPath>DtFecha.h</itemPath>
+      <itemPath>DtOferta.h</itemPath>
+      <itemPath>DtSeccion.h</itemPath>
+      <itemPath>DtSucursal.h</itemPath>
+      <itemPath>Empresa.h</itemPath>
+      <itemPath>Oferta.h</itemPath>
+      <itemPath>Seccion.h</itemPath>
+      <itemPath>Sucursal.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>DtEmpresa.cpp</itemPath>
+      <itemPath>DtOferta.cpp</itemPath>
+      <itemPath>DtSeccion.cpp</itemPath>
+      <itemPath>DtSucursal.cpp</itemPath>
+      <itemPath>Empresa.cpp</itemPath>
+      <itemPath>Oferta.cpp</itemPath>
+      <itemPath>Seccion.cpp</itemPath>
+      <itemPath>Sucursal.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+      </compileType>
+      <item path="DtEmpresa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtEmpresa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtFecha.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtOferta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtOferta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtSeccion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtSeccion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtSucursal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtSucursal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Empresa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Empresa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Oferta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Oferta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Seccion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Seccion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sucursal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sucursal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="DtEmpresa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtEmpresa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtFecha.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtOferta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtOferta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtSeccion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtSeccion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtSucursal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtSucursal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Empresa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Empresa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Oferta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Oferta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Seccion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Seccion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sucursal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sucursal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
