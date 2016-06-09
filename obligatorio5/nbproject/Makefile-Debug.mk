@@ -36,10 +36,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/DtEmpresa.o \
+	${OBJECTDIR}/DtEstudiante.o \
+	${OBJECTDIR}/DtFecha.o \
 	${OBJECTDIR}/DtOferta.o \
 	${OBJECTDIR}/DtSeccion.o \
 	${OBJECTDIR}/DtSucursal.o \
 	${OBJECTDIR}/Empresa.o \
+	${OBJECTDIR}/Estudiante.o \
 	${OBJECTDIR}/Oferta.o \
 	${OBJECTDIR}/Seccion.o \
 	${OBJECTDIR}/Sucursal.o \
@@ -75,6 +78,16 @@ ${OBJECTDIR}/DtEmpresa.o: DtEmpresa.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtEmpresa.o DtEmpresa.cpp
 
+${OBJECTDIR}/DtEstudiante.o: DtEstudiante.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtEstudiante.o DtEstudiante.cpp
+
+${OBJECTDIR}/DtFecha.o: DtFecha.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtFecha.o DtFecha.cpp
+
 ${OBJECTDIR}/DtOferta.o: DtOferta.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -94,6 +107,11 @@ ${OBJECTDIR}/Empresa.o: Empresa.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Empresa.o Empresa.cpp
+
+${OBJECTDIR}/Estudiante.o: Estudiante.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Estudiante.o Estudiante.cpp
 
 ${OBJECTDIR}/Oferta.o: Oferta.cpp 
 	${MKDIR} -p ${OBJECTDIR}
