@@ -24,7 +24,6 @@ class DtSucursal{
         string getTelefono() const;
         string getDireccion() const;
         vector<DtSeccion> getSetDtSecciones();
-        
         bool operator == (const DtSucursal) const;
         friend ostream& operator << (ostream&, DtSucursal&);
 

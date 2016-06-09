@@ -22,7 +22,6 @@ class DtEmpresa{
 
         string getRut() const;
         string getNombre() const;
-
         friend ostream& operator << (ostream&, DtEmpresa&);
 
         virtual ~DtEmpresa();

@@ -14,9 +14,10 @@ class Seccion {
     private:
         string nombre;
         int interno;
-//        map<int,Oferta*> colOfertas;
+//      map<int,Oferta*> colOfertas;
 
     public:
+  
         Seccion();
         Seccion(const Seccion&);
         Seccion(string, int);
@@ -27,9 +28,9 @@ class Seccion {
         void setInterno(int);
 
         DtSeccion getDtSeccion();
-//        void agregarOferta(Oferta*);
-//        void nuevaOferta(DtOferta,Seccion*);
-//        void removerOferta(Oferta*);
+//      void agregarOferta(Oferta*);
+//      void nuevaOferta(DtOferta,Seccion*);
+//      void removerOferta(Oferta*);
 
         virtual ~Seccion();
 };

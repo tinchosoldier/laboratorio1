@@ -4,9 +4,7 @@
 
 using namespace std;
 
-Sucursal::Sucursal(){
-
-}
+Sucursal::Sucursal(){}
 
 Sucursal::Sucursal(const Sucursal& sucursal){
     this->nombre=sucursal.nombre;

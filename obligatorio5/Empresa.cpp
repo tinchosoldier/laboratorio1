@@ -4,9 +4,7 @@
 
 using namespace std;
 
-Empresa::Empresa(){
-
-}
+Empresa::Empresa(){}
 
 Empresa::Empresa(const Empresa& empresa){
     this->rut=empresa.rut;

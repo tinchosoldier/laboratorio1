@@ -13,7 +13,7 @@ class DtSeccion{
         string nombre;
 	int interno;
 //	vector<DtOferta> colOfertas;
-
+        
     public:
         
         DtSeccion();
@@ -24,7 +24,6 @@ class DtSeccion{
 	string getNombre() const;
 	int getInterno() const;
 //	vector<DtOferta> getOfertas() const;
-
         bool operator == (const DtSeccion) const;
         friend ostream& operator << (ostream&, DtSeccion&);
 

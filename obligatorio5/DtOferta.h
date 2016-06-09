@@ -11,8 +11,7 @@ using namespace std;
 class DtOferta {
     
     private:
-/*
-	int numExpediente;
+/*	int numExpediente;
 	string titulo;
 	string descripcion;
 	int cantHorasSemanales;
@@ -26,9 +25,10 @@ class DtOferta {
     public:
 
 	DtOferta();
+
 /*	DtOferta(const DtOferta&);
 	DtOferta(int, string, string, int, float, float,DtFecha&,DtFecha&,int,vector<DtAsignatura>);
-
+ 
 	int getNumExpediente() const;
 	string getTitulo() const;
 	string getDescripcion() const;

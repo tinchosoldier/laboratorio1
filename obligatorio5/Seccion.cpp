@@ -4,8 +4,6 @@
 #include "DtSeccion.h"
 #include "Oferta.h"
 #include "DtOferta.h"
-//#include "ManejadorOfertas.h"
-//#include "ManejadorAsignaturas.h"
 
 using namespace std;
 

@@ -4,9 +4,7 @@
 
 using namespace std;
 
-DtSeccion::DtSeccion(){
-
-}
+DtSeccion::DtSeccion(){}
 
 DtSeccion::DtSeccion(const DtSeccion& DtS){
     this->nombre = DtS.nombre;
@@ -40,10 +38,9 @@ bool DtSeccion::operator == (const DtSeccion) const{
 
 }
 
-ostream& operator << (ostream &o,DtSeccion &dtSe) { 
-    return o << "Nombre: " << dtSe.getNombre() << "\n" << "Interno: " << dtSe.getInterno();  
+ostream& operator << (ostream &o,DtSeccion &dtse) { 
+    return o << "Nombre: " << dtse.getNombre() 
+             << "\n" << "Interno: " << dtse.getInterno();  
 }
 
-DtSeccion::~DtSeccion(){
-
-}
+DtSeccion::~DtSeccion(){}

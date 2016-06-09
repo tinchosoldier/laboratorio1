@@ -11,11 +11,15 @@
 using namespace std;
 
 class Empresa {
+    
     private:
+    
         string rut;
         string nombre;
         map<string,Sucursal*> sucursales;
+    
     public:
+        
         Empresa();
         Empresa(const Empresa&);
         Empresa(string,string,vector<DtSucursal>);
