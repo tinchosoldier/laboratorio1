@@ -8,24 +8,19 @@ DtFecha::DtFecha() {
     this->dia = 1;
     this->mes = 1;
     this->anio = 1900;
-    this->hora= 0;
-    this->minuto= 0;
+
 }
 
 DtFecha::DtFecha(const DtFecha &Fecha){
     this->dia = Fecha.dia;
     this->mes = Fecha.mes;
     this->anio = Fecha.anio;
-    this->hora = Fecha.hora;
-    this->minuto = Fecha.minuto;
 }
 
-DtFecha::DtFecha(const int dia, const int mes, const int anio, const int horas, const int minutos){
-    if((dia > 31) || (dia < 1) || (mes > 12) || (mes < 1) || (anio < 1900) || (horas < 0) || (horas > 59) || (minutos < 0) || (minutos > 59))
+DtFecha::DtFecha(const int dia, const int mes, const int anio){
+    if((dia > 31) || (dia < 1) || (mes > 12) || (mes < 1) || (anio < 1900)){
         throw invalid_argument("Error: fecha invalida.");
-    else {
-        this->minuto = minutos;
-        this->hora = horas;
+    }else {
         this->dia = dia;
         this->mes = mes;
         this->anio = anio;
@@ -44,20 +39,10 @@ int DtFecha::getMes() const{
     return mes;
 }
 
-int DtFecha::getHoras() const{
-    return hora;
-}
-
-int DtFecha::getMinutos() const{
-    return minuto;
-}
-
 bool DtFecha::operator==(const DtFecha &fecha) const{
     return((this->dia == fecha.dia) && 
            (this->mes == fecha.mes) && 
-           (this->anio == fecha.anio) && 
-           (this->hora == fecha.hora) && 
-           (this->minuto == fecha.minuto));
+           (this->anio == fecha.anio));
 }
 
 bool DtFecha::operator>(const DtFecha& fecha) const{}
@@ -65,8 +50,7 @@ bool DtFecha::operator>(const DtFecha& fecha) const{}
 ostream& operator << (ostream &o,DtFecha &dtf)  {
     return o << dtf.getDia() << "/" 
              << dtf.getMes() << "/" 
-             << dtf.getAnio() << " " 
-             << dtf.getHoras() << ":" << dtf.getMinutos();
+             << dtf.getAnio();
 }
 
 DtFecha::~DtFecha() {

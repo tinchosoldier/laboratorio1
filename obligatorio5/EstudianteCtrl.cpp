@@ -3,7 +3,7 @@
 #include "Asignatura.h"
 #include "DtAsignatura.h"
 #include "DtOferta.h"
-#include "Oferta.h"
+//#include "Oferta.h"
 
 using namespace std;
 

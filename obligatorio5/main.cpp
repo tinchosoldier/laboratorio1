@@ -5,10 +5,9 @@
 
 #include "DtFecha.h"
 #include "DtOferta.h"
-#include "DtSeccion.h"
+
 #include "DtFecha.h"
 #include "DtEmpresa.h"
-#include "DtSucursal.h"
 #include "DtSucursal.h"
 
 #include "Empresa.h"
@@ -17,6 +16,7 @@
 
 using namespace std;
 
+void iniciarSistema();
 void cargarDatos();
 
 int main(int argc, char** argv) {
@@ -25,45 +25,135 @@ int main(int argc, char** argv) {
 }
 
 void cargarDatos(){
+
+    // Coleccion de DtOferta
+/*    vector<DtOferta> colOferta2;
+    vector<DtOferta> colOferta10;
+    vector<DtOferta> colOferta15;
+    vector<DtOferta> colOferta22;
+    
+
+    Oferta* O1 = new Oferta(45896,"Auditor de seguridad part-time junior","Segurol S.A. busca estudiantes de Ingenieria en Computacion para unirse a su equipo. Se requiere un nivel minimo de conocimiento en seguridad informatica y programacion. Interesados enviar cv a oportunidades@segurol.com.uy",20,2000,3000,DtFecha(01,6,2015),DtFecha(20,7,2015),5,colAsignaturas1, SE2);
+    Oferta* O2 = new Oferta(12356,"Ayudante de Ingeniero","Estamos buscando estudiantes avanzados de Ingenieria Electrica con perfil potencia. Es imprescindible tener disponibilidad para viajar al interior del pais una vez por mes. Se pagan viaticos ademas de sueldo. Llamar al 25225323 int 1205 para mas detalles.",30,4000,5000,DtFecha(20,5,2015),DtFecha(30,6,2015),2,colAsignaturas2,SE10);
+    Oferta* O3 = new Oferta(88890,"Desarrollador C++","Buscamos desarrollador C++ para importante proyecto internacional. Llenar formulario con datos personales y cv en minisoft.uy/careers.",40,5000,6000,DtFecha(5,6,2015,0,0),DtFecha(6,8,2015,0,0),4,colAsignaturas3,SE15);
+    Oferta* O4 = new Oferta(49563,"Estudiantes para dictar clases de Calculo I y II","Buscamos estudiantes de Ingenieria con Calculo 1 y 2 aprobadas. Deben tener disponibilidad horaria y gusto por enseñar. Enviar mail a academiayotexplico@gmail.com.",5,500,2000,DtFecha(10,9,2015),DtFecha(20,12,2015),10,colAsignaturas4,SE22);
+    
+    mO -> agregarOferta(of1);
+    DtOferta dtO1 = of1->getDtOferta();
+    vector<DtOferta> colOferta2;
+    colOferta2.push_back(dtO1);
+
+    mO -> agregarOferta(of2);
+    DtOferta dtO2 = of2->getDtOferta();
+    vector<DtOferta> colOferta10;
+    colOferta10.push_back(dtO2);
+
+    mO -> agregarOferta(of3);
+    DtOferta dtO3 = of3->getDtOferta();
+    vector<DtOferta> colOferta15;
+    colOferta15.push_back(dtO3);
+
+    mO -> agregarOferta(of4);
+    DtOferta dtO4 = of4->getDtOferta();
+    vector<DtOferta> colOferta22;
+    colOferta22.push_back(dtO4);    
+*/    
+    
+    vector<DtSeccion> colSU1;
+    vector<DtSeccion> colSU2;
+    vector<DtSeccion> colSU3;
+    vector<DtSeccion> colSU4;
+    vector<DtSeccion> colSU5;
+    vector<DtSeccion> colSU6;
+    vector<DtSeccion> colSU7;
+    
+    vector<DtOferta> colOferta;
     
     // Creo los DtSeccion
-    DtSeccion dtsec1 = DtSeccion("Contabilidad",110);
-    DtSeccion dtsec2 = DtSeccion("Recursos Humanos",111);
-    DtSeccion dtsec3 = DtSeccion("Tesoreria",112);
-    DtSeccion dtsec4 = DtSeccion("Ventas",113);
-    DtSeccion dtsec5 = DtSeccion("Marketing",114);
-    DtSeccion dtsec6 = DtSeccion("Inspeccion administrativa",115);
-    DtSeccion dtsec7 = DtSeccion("Departamento Tecnico",116);
+    DtSeccion SE1 = DtSeccion("Contaduria",101,colOferta);
+    DtSeccion SE2 = DtSeccion("Recursos humanos",102,colOferta);
+    DtSeccion SE3 = DtSeccion("Recepcion",103,colOferta);
+    DtSeccion SE4 = DtSeccion("Desarrollo",104,colOferta);
+    DtSeccion SE5 = DtSeccion("Pentesting",105,colOferta);
+    DtSeccion SE6 = DtSeccion("Marketing",1201,colOferta);
+    DtSeccion SE7 = DtSeccion("Atencion al cliente",1202,colOferta);
+    DtSeccion SE8 = DtSeccion("Tesoreria",1203,colOferta);
+    DtSeccion SE9 = DtSeccion("Ventas",1204,colOferta);
+    DtSeccion SE10 = DtSeccion("Seccion tecnica",1205,colOferta);
+    DtSeccion SE11 = DtSeccion("Seccion tecnica",1009,colOferta);
+    DtSeccion SE12 = DtSeccion("I+D",1008,colOferta);
+    DtSeccion SE13 = DtSeccion("Recepcion",1000,colOferta);
+    DtSeccion SE14 = DtSeccion("Secretaria",100,colOferta);
+    DtSeccion SE15 = DtSeccion("Desarrollo",1001,colOferta);
+    DtSeccion SE16 = DtSeccion("Testing",1002,colOferta);
+    DtSeccion SE17 = DtSeccion("Secretaria",100,colOferta);
+    DtSeccion SE18 = DtSeccion("Desarrollo",1001,colOferta);
+    DtSeccion SE19 = DtSeccion("Testing",1002,colOferta);
+    DtSeccion SE20 = DtSeccion("Laboratorio",10,colOferta);
+    DtSeccion SE21 = DtSeccion("Atencion comercial",11,colOferta);
+    DtSeccion SE22 = DtSeccion("Direccion",101,colOferta);
+    DtSeccion SE23 = DtSeccion("Inscripciones",102,colOferta);
     
-    // Creo el vector y agrego las secciones
-    vector<DtSeccion> colSeccion1;
-    colSeccion1.push_back(dtsec1);
-    colSeccion1.push_back(dtsec2);
-    // Creo el vector y agrego las secciones
-    vector<DtSeccion> colSeccion2;
-    colSeccion2.push_back(dtsec3);
-    colSeccion2.push_back(dtsec4);
-    colSeccion2.push_back(dtsec5);
-    // Creo el vector y agrego las secciones
-    vector<DtSeccion> colSeccion3;
-    colSeccion3.push_back(dtsec6);
-    colSeccion3.push_back(dtsec7);
+    colSU1.push_back(SE1);
+    colSU1.push_back(SE2);
+    colSU1.push_back(SE3);
+    colSU1.push_back(SE4);
+    colSU1.push_back(SE5);
     
-    // Creo y cargo la sucursal
-    DtSucursal dts1 = DtSucursal("Sucursal central","24089595","Centro", colSeccion1);
+    colSU2.push_back(SE6);
+    colSU2.push_back(SE7);
+    colSU2.push_back(SE8);
+    colSU2.push_back(SE9);
+    colSU2.push_back(SE10);
+    
+    colSU3.push_back(SE11);
+    colSU3.push_back(SE12);
+    colSU3.push_back(SE13);
+    
+    colSU4.push_back(SE14);
+    colSU4.push_back(SE15);
+    colSU4.push_back(SE16);
+    
+    colSU5.push_back(SE17);
+    colSU5.push_back(SE18);
+    colSU5.push_back(SE19);
+    
+    colSU6.push_back(SE20);
+    colSU6.push_back(SE21);
+    
+    colSU7.push_back(SE22);
+    colSU7.push_back(SE23);
+    
+    // Colecciones de sucursales
     vector<DtSucursal> colSucursal1;
-    colSucursal1.push_back(dts1);
-    // Creo y cargo la sucursal
-    DtSucursal dts2 = DtSucursal("Sucursal 1","24089596","Pocitos", colSeccion2);
     vector<DtSucursal> colSucursal2;
-    colSucursal2.push_back(dts2);
-    // Creo y cargo la sucursal
-    DtSucursal dts3 = DtSucursal("Sucursal 2","24089597","Goes", colSeccion3);
     vector<DtSucursal> colSucursal3;
-    colSucursal3.push_back(dts3);
+    vector<DtSucursal> colSucursal4;
+    vector<DtSucursal> colSucursal5;
     
-    Empresa* e1 = new Empresa("1111222287","Lamisil",colSucursal1);
-    Empresa* e2 = new Empresa("2222855556","Cavanassi",colSucursal2);
-    Empresa* e3 = new Empresa("1458899855","Toldos Honos",colSucursal3);
+    // Creo DtSucursales
+    DtSucursal SU1 = DtSucursal("Casa central","24598765","Ciudad Vieja", colSU1);
+    DtSucursal SU2 = DtSucursal("Sucursal comercial","25225323","Malvin", colSU2);
+    DtSucursal SU3 = DtSucursal("Sucursal San Carlos","42668350","San Carlos", colSU3);
+    DtSucursal SU4 = DtSucursal("Sede Montevideo","25468932","Buceo", colSU4);
+    DtSucursal SU5 = DtSucursal("Sede Ciudad de la Costa","43764232","Solymar", colSU5);
+    DtSucursal SU6 = DtSucursal("Oficina central","25495878","Centro", colSU6);
+    DtSucursal SU7 = DtSucursal("Academia","24594565","Parque Rodo", colSU7);
+
+    // Cargo las colecciones con los DtSucursal
+    colSucursal1.push_back(SU1);
+    colSucursal2.push_back(SU2);
+    colSucursal2.push_back(SU3);
+    colSucursal3.push_back(SU4);
+    colSucursal3.push_back(SU5);
+    colSucursal4.push_back(SU6);
+    colSucursal5.push_back(SU7);
+    
+    // Creo las empresas
+    Empresa* E1 = new Empresa("1112335684","Segurol S.A.",colSucursal1);
+    Empresa* E2 = new Empresa("5464897986","Ingenieros Electricos Unidos",colSucursal2);
+    Empresa* E3 = new Empresa("1265498765","MiniSoft Uy",colSucursal3);
+    Empresa* E4 = new Empresa("1298865497","RoboTI",colSucursal4);
+    Empresa* E5 = new Empresa("1326548654","Academia Yotexplico",colSucursal5);
     
 }

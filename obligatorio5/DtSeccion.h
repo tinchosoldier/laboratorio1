@@ -2,7 +2,7 @@
 #define DTSECCION_H
 #include <string>
 #include <iostream>
-//#include "DtOferta.h"
+#include "DtOferta.h"
 
 using namespace std;
 
@@ -12,18 +12,18 @@ class DtSeccion{
     
         string nombre;
 	int interno;
-//	vector<DtOferta> colOfertas;
+	vector<DtOferta> colOfertas;
         
     public:
         
         DtSeccion();
 	DtSeccion(const DtSeccion&);
-//	DtSeccion(string, int, vector<DtOferta>);
+	DtSeccion(string, int, vector<DtOferta>);
 	DtSeccion(string, int);
 
 	string getNombre() const;
 	int getInterno() const;
-//	vector<DtOferta> getOfertas() const;
+	vector<DtOferta> getOfertas() const;
         bool operator == (const DtSeccion) const;
         friend ostream& operator << (ostream&, DtSeccion&);
 

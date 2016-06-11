@@ -21,7 +21,7 @@ Oferta::Oferta(const Oferta& o){
     this->seccion = o.seccion;
 }
 
-Oferta::Oferta(int numExpediente, string titulo, string descripcion, int cantHorasSemanales, float salarioMin, float salarioMax,DtFecha fechaInicio,DtFecha fechaFin,int cantPuestos, map<int,Asignatura*> colAsignaturasRequeridas,Seccion* seccion){
+Oferta::Oferta(int numExpediente, string titulo, string descripcion, int cantHorasSemanales, float salarioMin, float salarioMax,DtFecha fechaInicio,DtFecha fechaFin,int cantPuestos, map<int,Asignatura*> colAsignaturas,Seccion* seccion){
     this->numExpediente = numExpediente;
     this->titulo = titulo;
     this->descripcion = descripcion;

@@ -2,8 +2,6 @@
 #include <iostream>
 #include "Seccion.h"
 #include "DtSeccion.h"
-#include "Oferta.h"
-#include "DtOferta.h"
 
 using namespace std;
 
@@ -12,12 +10,13 @@ Seccion::Seccion(){}
 Seccion::Seccion(const Seccion& seccion){
     this->nombre = seccion.nombre;
     this->interno = seccion.interno;
-//    this->colOfertas = seccion.colOfertas;
+    this->colOfertas = seccion.colOfertas;
 }
 
 Seccion::Seccion(string nombre,int interno){
     this->nombre = nombre;
     this->interno = interno;
+    
 }
 
 string Seccion::getNombre() const{
@@ -36,25 +35,26 @@ void Seccion::setInterno(int interno){
     this->interno = interno;
 }
 
-DtSeccion Seccion::getDtSeccion(){
-/*    
+DtSeccion Seccion::getDtSeccion(){  
     map<int,Oferta*>::iterator it;
-    vector<DtOferta> vo;
+    vector<DtOferta> dtOfertas;
     for (it = this->colOfertas.begin(); it != this->colOfertas.end(); ++it) {
-            DtOferta dtO = it->second->getDtOferta();
-            vo.push_back(dtO);
+            DtOferta dto = it->second->getDtOferta();
+            dtOfertas.push_back(dto);
     }
- */ 
-    //DtSeccion dtS = DtSeccion(this->nombre,this->interno,vo);
-    DtSeccion dtS = DtSeccion(this->nombre,this->interno);
-    return dtS;
+  
+    DtSeccion dts = DtSeccion(this->nombre,this->interno,dtOfertas);
+    return dts;
 }
 
-/*
 void Seccion::agregarOferta(Oferta* oferta){
-    colOfertas[oferta->getNumExpediente()] = oferta;
+    this->colOfertas[oferta->getNumExpediente()] = oferta;
 }
 
+void Seccion::removerOferta(Oferta* oferta){
+    this->colOfertas.erase(oferta->getNumExpediente());
+}
+/*
 void Seccion::nuevaOferta(DtOferta dtO, Seccion* seccion){
     vector<DtAsignatura>::iterator it;
     vector<DtAsignatura> setDtA = dtO.getSetDtAsignatura();
@@ -69,13 +69,10 @@ void Seccion::nuevaOferta(DtOferta dtO, Seccion* seccion){
     mO->agregarOferta(of);
 }
 
-void Seccion::removerOferta(Oferta* o){
-    this->colOfertas.erase(o->getNumExpediente());
-}
 */
 Seccion::~Seccion(){
-    /*map<int,Oferta*>::iterator it;
+    map<int,Oferta*>::iterator it;
     for (it = colOfertas.begin(); it != colOfertas.end(); ++it) {
         delete it->second;
-    }*/
+    }
 }

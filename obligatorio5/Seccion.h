@@ -4,17 +4,18 @@
 #include <iostream>
 #include <map>
 #include "DtSeccion.h"
-//#include "Oferta.h"
-//#include "DtOferta.h"
+#include "Oferta.h"
+#include "DtOferta.h"
 
 using namespace std;
 
 class Seccion {
     
     private:
+        
         string nombre;
         int interno;
-//      map<int,Oferta*> colOfertas;
+        map<int,Oferta*> colOfertas;
 
     public:
   
@@ -28,9 +29,10 @@ class Seccion {
         void setInterno(int);
 
         DtSeccion getDtSeccion();
-//      void agregarOferta(Oferta*);
+        void agregarOferta(Oferta*);
+        void removerOferta(Oferta*);
 //      void nuevaOferta(DtOferta,Seccion*);
-//      void removerOferta(Oferta*);
+
 
         virtual ~Seccion();
 };

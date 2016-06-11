@@ -10,8 +10,6 @@
 #include "DtEstudiante.h"
 #include "DtOferta.h"
 #include "Estudiante.h"
-#include "Oferta.h"
-#include "Seccion.h"
 //#include "IObserver.h"
 
 using namespace std;
