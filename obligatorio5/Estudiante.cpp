@@ -59,7 +59,8 @@ void Estudiante::setApellido(string apellido){
     this->apellido = apellido;
 }
 
-void Estudiante::setFechaNacimiento(int anio, int mes, int dia, int horas, int minutos){
+void Estudiante::setFechaNacimiento(DtFecha fecha){
+    this->fechaNacimiento = fecha;
 }
 
 void Estudiante::setTelefono(string telefono){

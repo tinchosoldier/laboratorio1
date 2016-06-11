@@ -36,7 +36,7 @@ class Estudiante {
 	string getTelefono() const;
 	void setNombre(string);
 	void setApellido(string);
-	void setFechaNacimiento(int, int, int, int, int);
+	void setFechaNacimiento(DtFecha);
 	void setTelefono(string);
         map<int,Salva*> getSalvadas();
         void setSalvada(Salva*);

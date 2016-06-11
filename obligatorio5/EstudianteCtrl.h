@@ -19,6 +19,7 @@ class EstudianteCtrl: public IEstudianteCtrl {
         void confirmarInscripcion(DtEstudiante);
         vector<DtEstudiante> listarEstudiantes();
         DtEstudiante listarEstudiante(string);
+        void agregarEstudiante(string, string, string, DtFecha, string);
         
 	virtual ~EstudianteCtrl();
 

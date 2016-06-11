@@ -2,6 +2,8 @@
 #include <string>
 #include <stdexcept>
 #include <vector>
+#include <cstdlib>
+#include <stdio.h>
 
 #include "DtFecha.h"
 #include "DtOferta.h"
@@ -14,14 +16,67 @@
 #include "Seccion.h"
 #include "Sucursal.h"
 
+#include "EstudianteCtrl.h"
+
 using namespace std;
+
+
+static EstudianteCtrl * sistema = new EstudianteCtrl();  //ERROR: con IEstudianteCtrl
+
+void imprimirEstudiantes();
 
 void iniciarSistema();
 void cargarDatos();
 
 int main(int argc, char** argv) {
 
+        //static EstudianteCtrl * sistema = new EstudianteCtrl();  //ERROR: con IEstudianteCtrl
+    int opcion;
+    
+    do {
+        system ("clear");
+        cout<<"Menu:\n1 - Agregar estudiante\n2 - Listar datos estudiante.\n0 - Salir.\nIngrese la opcion a realizar: ";
+        cin>>opcion;
+        
+        switch (opcion) {
+            case 1:
+                system ("clear");
+                cout<<"Agregando datos por defecto...\n\n";
+                sistema->agregarEstudiante("4516231", "Esteban", "Perez", DtFecha(10, 2, 1990), "99111222");
+                sistema->agregarEstudiante("5111235", "Felipe", "Garcia", DtFecha(20, 8, 1992), "24035612");
+                sistema->agregarEstudiante("3594561", "Juan", "Wolf", DtFecha(30, 01, 1980), "91222223");
+                cout<<"Estudiante agregado con exito. Presione enter para continuar...";
+                getchar();
+                getchar();
+                break;
+            case 2:
+                system ("clear");
+                imprimirEstudiantes();
+                break;
+            case 0:
+                break;
+        }
+    } while (opcion != 0);
+    
     return 0;
+}
+
+void imprimirEstudiantes() {
+    vector <DtEstudiante> Dts = sistema->listarEstudiantes();
+    int i = 1;
+    for (vector <DtEstudiante>::iterator it = Dts.begin(); it != Dts.end(); it++) {
+        cout<<i<<"- Nombre: "<<it->getNombre()<<" "<<it->getApellido()<<" - Cedula: "<<it->getCedula()<<"\n";
+        i++;
+    }
+    int opcion;
+    cout<<"\nIngrese el numero de estudiante del que desea ver lo datos: ";
+    cin>>opcion;
+    opcion --;
+    system ("clear");
+    cout<<Dts[opcion];
+    cout<<"\nPresione enter para continuar...";
+    getchar();
+    getchar();
 }
 
 void cargarDatos(){
