@@ -20,7 +20,7 @@ class IOfertaCtrl {
         virtual vector<DtSucursal> listarSucursales(DtEmpresa) = 0;
 	virtual vector<DtSeccion> listarSecciones(DtSucursal) = 0;
 	virtual vector<DtAsignatura> listarAsignaturas() = 0;
-        virtual void altaOferta(DtOferta) = 0;
+        virtual void altaOferta(DtOferta&) = 0;
         
 };
 
