@@ -6,6 +6,7 @@
 #include <vector>
 #include "DtFecha.h"
 #include "DtEstudiante.h"
+#include "Salva.h"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ class Estudiante {
 	DtFecha fechaNacimiento;
 	string telefono;
 	int totalCreditos;
+        map<int,Salva*> colSalvadas;
 
     public:
 
@@ -36,6 +38,8 @@ class Estudiante {
 	void setApellido(string);
 	void setFechaNacimiento(int, int, int, int, int);
 	void setTelefono(string);
+        map<int,Salva*> getSalvadas();
+        void setSalvada(Salva*);
 
 	DtEstudiante getDtEstudiante();
 

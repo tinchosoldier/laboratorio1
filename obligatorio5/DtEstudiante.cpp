@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "DtEstudiante.h"
+#include "DtAsignatura.h"
 #include "DtFecha.h"
 
 using namespace std;
@@ -16,13 +17,22 @@ DtEstudiante::DtEstudiante(const DtEstudiante& dte){
     this->totalCreditos = dte.totalCreditos;
 }
 
-DtEstudiante::DtEstudiante(string cedula, string nombre, string apellido, DtFecha& fechaNacimiento, string telefono, int totalCreditos){
+DtEstudiante::DtEstudiante(string cedula, string nombre, string apellido, DtFecha& fechaNacimiento, string telefono, int totalCreditos, map<int,Salva*>& colSalvadas){
     this->cedula = cedula;
     this->nombre = nombre;
     this->apellido = apellido;
     this->fechaNacimiento = fechaNacimiento;
     this->telefono = telefono;
     this->totalCreditos = totalCreditos;
+    vector<DtAsignatura> colDtAsignaturas;
+    map<int,Salva*>::iterator it;
+    DtAsignatura dta;
+    for (it = colSalvadas.begin(); it != colSalvadas.end(); ++it) {
+            Asignatura* asignatura = (*it->second).getSalvada();
+            dta = asignatura->getDtAsignatura(); 
+            colDtAsignaturas.push_back(dta);
+    };
+    this->colSalvadas = colDtAsignaturas;
 }
 
 string DtEstudiante::getCedula() const{

@@ -67,7 +67,7 @@ void Estudiante::setTelefono(string telefono){
 }
 
 DtEstudiante Estudiante::getDtEstudiante(){
-    DtEstudiante dte = DtEstudiante(this->cedula, this->nombre, this->apellido, this->fechaNacimiento, this->telefono, this->totalCreditos);
+    DtEstudiante dte = DtEstudiante(this->cedula, this->nombre, this->apellido, this->fechaNacimiento, this->telefono, this->totalCreditos, this->colSalvadas);
     return dte;
 }
 

@@ -4,14 +4,15 @@
 #include <iostream>
 #include <vector>
 #include "DtFecha.h"
-//#include "DtAsignatura.h"
+#include "DtAsignatura.h"
+#include "DtEstudiante.h"
 
 using namespace std;
 
 class DtOferta {
     
     private:
-/*	int numExpediente;
+	int numExpediente;
 	string titulo;
 	string descripcion;
 	int cantHorasSemanales;
@@ -20,13 +21,14 @@ class DtOferta {
 	DtFecha fechaInicio;
 	DtFecha fechaFin;
 	int cantPuestos;
-	vector<DtAsignatura> colDtAsignatura;
-*/
+	vector<DtEstudiante> colDtEstudiantes;
+	vector<DtAsignatura> colDtAsignaturas;
+
     public:
 
 	DtOferta();
 
-/*	DtOferta(const DtOferta&);
+	DtOferta(const DtOferta&);
 	DtOferta(int, string, string, int, float, float,DtFecha&,DtFecha&,int,vector<DtAsignatura>);
  
 	int getNumExpediente() const;
@@ -38,11 +40,13 @@ class DtOferta {
 	DtFecha getFechaInicio() const;
 	DtFecha getFechaFin() const;
 	int getCantPuestos() const;
-	vector<DtAsignatura> getSetDtAsignatura();
+	vector<DtAsignatura> getDtAsignaturas();
+	vector<DtEstudiante> getDtEstudiantes();
+        void setDtEstudiante(DtEstudiante);
+        
+//      bool operator == (const DtOferta) const;
+//      friend ostream& operator << (ostream&, DtOferta&);
 
-        bool operator == (const DtOferta) const;
-        friend ostream& operator << (ostream&, DtOferta&);
-*/
 	virtual ~DtOferta();
 };
 
