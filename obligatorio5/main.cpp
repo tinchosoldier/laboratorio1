@@ -34,8 +34,10 @@ int main(int argc, char** argv) {
     // Obtengo la instancia del sistema(Singleton)
     Sistema* sis = Sistema::getInstance();
     
-    sis->setFecha(DtFecha(10, 2, 1990));
+    // Asigna la fecha del sistema
+    sis->modificarFecha();
     
+    // Muestro el menu
     menu(sis->getFecha());
     
     

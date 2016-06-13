@@ -11,11 +11,12 @@ class Sistema { /* Patron Singleton */
         
         static Sistema* sis;
         Sistema();
+        void setFecha(DtFecha);
         
     public:
   
         DtFecha getFecha() const;
-        void setFecha(DtFecha);
+        void modificarFecha();
         
         static Sistema* getInstance();
         ~Sistema();
