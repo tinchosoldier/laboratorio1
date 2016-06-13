@@ -6,6 +6,8 @@
 #include "Oferta.h"
 #include "Empresa.h"
 #include "Estudiante.h"
+#include "Carrera.h"
+#include "Asignatura.h"
 
 class Sistema { /* Patron Singleton */
     
