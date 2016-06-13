@@ -21,12 +21,11 @@
 using namespace std;
 
 void imprimirEstudiantes();
-void iniciarSistema();
 void cargarDatos();
-void menu(DtFecha);
 
 int main(int argc, char** argv) {
 
+    // Obtengo las instancias de Ctrl (Factory) 
     FactoryCtrl* ctrl = FactoryCtrl::getFactoryCtrl();
     IOfertaCtrl* ofertaCtrl = ctrl->getIOfertaCtrl();
     IEstudianteCtrl* estudianteCtrl = ctrl->getIEstudianteCtrl();
@@ -38,7 +37,7 @@ int main(int argc, char** argv) {
     sis->modificarFecha();
     
     // Muestro el menu
-    menu(sis->getFecha());
+    sis->menu();
     
     
     /* Sofi
@@ -94,21 +93,7 @@ void imprimirEstudiantes() {
 }
 */
 
-void menu(DtFecha fechaSistema){
-    cout << "Fecha del sistema: " << fechaSistema << endl << endl;
-    cout << "s) Configurar sistema" << endl;
-    cout << "2) Alta oferta laboral" << endl;
-    //cout << "3) Alta entrevista" << endl;
-    //cout << "4) Inscripcion oferta laboral" << endl;
-    //cout << "5) Listar ofertas vigentes" << endl;
-    //cout << "6) Consultar datos de estudiante" << endl;
-    //cout << "7) Asignacion de oferta a estudiante" << endl;
-    //cout << "8) Modificar estudiante" << endl;
-    //cout << "9) Modificar llamado" << endl;
-    //cout << "10) Dar de baja llamado" << endl << endl;
-    cout << "0) Salir" << endl << endl;
-    cout << "> ";
-}
+
 
 void cargarDatos(){
 
