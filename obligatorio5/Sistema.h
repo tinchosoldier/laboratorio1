@@ -23,6 +23,7 @@ class Sistema { /* Patron Singleton */
         map<int,Asignatura*> colAsignaturas;
         
         Sistema();
+        void cargarDatos();
         void setFecha(DtFecha);
         
     public:
@@ -30,7 +31,6 @@ class Sistema { /* Patron Singleton */
         /* Operaciones del sistema */
         DtFecha getFecha() const;
         void modificarFecha();
-        void menu();
         
         /* Operaciones de Oferta */
         vector<DtOferta> getDtOfertas();
