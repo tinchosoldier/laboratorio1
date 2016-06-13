@@ -10,7 +10,6 @@
 #include "DtEstudiante.h"
 #include "DtOferta.h"
 #include "Estudiante.h"
-//#include "IObserver.h"
 
 using namespace std;
 
@@ -66,9 +65,6 @@ class Oferta{
         
         void agregarEstudiante(Estudiante*);
         void agregarAsignatura(Asignatura*);
-//      bool noTieneEstudiantes();
-//      bool existeEstudiante(string);
-//      void agregarEstudianteEntrevista(string,DtFecha);
                 
 	virtual ~Oferta();
 };

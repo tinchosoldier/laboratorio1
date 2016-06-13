@@ -4,9 +4,7 @@
 
 using namespace std;
 
-Oferta::Oferta(){
-
-}
+Oferta::Oferta(){}
 
 Oferta::Oferta(const Oferta& o){
     this->numExpediente = o.numExpediente;
@@ -149,20 +147,5 @@ void Oferta::agregarAsignatura(Asignatura* asignatura){
     int codigo = asignatura->getCodigo();
     this->colAsignaturas[codigo] = asignatura;
 }
-
-/*
-bool Oferta::noTieneEstudiantes(){
-    return this->colEstudiantesInscriptos.empty();
-}
-
-
-bool Oferta::existeEstudiante(string cedula){
-    return (this->colEstudiantesInscriptos[cedula]!=NULL);
-}
-
-void Oferta::agregarEstudianteEntrevista(string cedula,DtFecha fecha){
-    this->entrevistas[cedula]=fecha;
-}
-*/
 
 Oferta::~Oferta(){}

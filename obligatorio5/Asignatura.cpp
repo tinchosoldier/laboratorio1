@@ -31,8 +31,7 @@ string Asignatura::getNombre() const{
 }
 
 int Asignatura::getCreditos() const{
-  return this->creditos;
-
+    return this->creditos;
 }
     
 void Asignatura::setCodigo(int codigo){

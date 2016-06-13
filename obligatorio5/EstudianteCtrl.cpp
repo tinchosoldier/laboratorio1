@@ -26,7 +26,7 @@ vector<DtEstudiante> EstudianteCtrl::listarEstudiantes(){
 DtEstudiante EstudianteCtrl::listarEstudiante(string ci){}
 
 void EstudianteCtrl::agregarEstudiante(string cedula, string nombre, string apellido, DtFecha fechaNacimiento, string telefono) {
-    /* Sofi
+    /* Sofi 
     Estudiante * estudiante = new Estudiante(cedula, nombre, apellido, fechaNacimiento, telefono);
     this->estudiantes.push_back(*estudiante); */
 }

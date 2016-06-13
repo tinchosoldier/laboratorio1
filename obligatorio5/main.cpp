@@ -8,7 +8,6 @@
 #include "DtFecha.h"
 #include "DtOferta.h"
 
-#include "DtFecha.h"
 #include "DtEmpresa.h"
 #include "DtSucursal.h"
 
@@ -16,21 +15,33 @@
 #include "Seccion.h"
 #include "Sucursal.h"
 
-#include "EstudianteCtrl.h"
+#include "Sistema.h"
+#include "FactoryCtrl.h"
 
 using namespace std;
 
-
-static EstudianteCtrl * sistema = new EstudianteCtrl();  //ERROR: con IEstudianteCtrl
-
 void imprimirEstudiantes();
-
 void iniciarSistema();
 void cargarDatos();
+void menu(DtFecha);
 
 int main(int argc, char** argv) {
 
-        //static EstudianteCtrl * sistema = new EstudianteCtrl();  //ERROR: con IEstudianteCtrl
+    FactoryCtrl* ctrl = FactoryCtrl::getFactoryCtrl();
+    IOfertaCtrl* ofertaCtrl = ctrl->getIOfertaCtrl();
+    IEstudianteCtrl* estudianteCtrl = ctrl->getIEstudianteCtrl();
+
+    // Obtengo la instancia del sistema(Singleton)
+    Sistema* sis = Sistema::getInstance();
+    
+    sis->setFecha(DtFecha(10, 2, 1990));
+    
+    menu(sis->getFecha());
+    
+    
+    /* Sofi
+    static EstudianteCtrl * sistema = new EstudianteCtrl();  //ERROR: con IEstudianteCtrl
+    
     int opcion;
     
     do {
@@ -57,10 +68,11 @@ int main(int argc, char** argv) {
                 break;
         }
     } while (opcion != 0);
-    
+    */
     return 0;
 }
 
+/* Sofi
 void imprimirEstudiantes() {
     vector <DtEstudiante> Dts = sistema->listarEstudiantes();
     int i = 1;
@@ -77,6 +89,23 @@ void imprimirEstudiantes() {
     cout<<"\nPresione enter para continuar...";
     getchar();
     getchar();
+}
+*/
+
+void menu(DtFecha fechaSistema){
+    cout << "Fecha del sistema: " << fechaSistema << endl << endl;
+    cout << "s) Configurar sistema" << endl;
+    cout << "2) Alta oferta laboral" << endl;
+    //cout << "3) Alta entrevista" << endl;
+    //cout << "4) Inscripcion oferta laboral" << endl;
+    //cout << "5) Listar ofertas vigentes" << endl;
+    //cout << "6) Consultar datos de estudiante" << endl;
+    //cout << "7) Asignacion de oferta a estudiante" << endl;
+    //cout << "8) Modificar estudiante" << endl;
+    //cout << "9) Modificar llamado" << endl;
+    //cout << "10) Dar de baja llamado" << endl << endl;
+    cout << "0) Salir" << endl << endl;
+    cout << "> ";
 }
 
 void cargarDatos(){
