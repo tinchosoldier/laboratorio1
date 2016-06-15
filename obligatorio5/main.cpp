@@ -29,6 +29,7 @@ void menu(DtFecha);
 
 int main(int argc, char** argv) {
 
+    /* Hay que llamar a la fabrica cada vez que se necesite y luego eliminar la instancia */
     // Obtengo las instancias de Ctrl (Factory) 
     ctrl = FactoryCtrl::getFactoryCtrl();
     ofertaCtrl = ctrl->getIOfertaCtrl();

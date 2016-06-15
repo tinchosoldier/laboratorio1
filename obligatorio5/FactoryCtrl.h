@@ -13,6 +13,7 @@ class FactoryCtrl { /* Patron Factory */
     private:
         
 	static FactoryCtrl* ctrl;
+        // Quitar songleton en la factory
 	FactoryCtrl();
 
     public:

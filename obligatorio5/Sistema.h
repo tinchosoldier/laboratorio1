@@ -19,6 +19,7 @@ class Sistema { /* Patron Singleton */
         map<int,Oferta*> colOfertas;
         map<string,Empresa*> colEmpresas;
         map<string,Estudiante*> colEstudiantes;
+        // No se usa
         map<int,Carrera*> colCarreras;
         map<int,Asignatura*> colAsignaturas;
         
